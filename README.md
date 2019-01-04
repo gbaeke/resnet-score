@@ -6,4 +6,11 @@ Use the following command to start the container:
 
 docker run -d -p 5001:5001 gbaeke/onnxresnet50v2
 
+Use tool as follows:
+
+./class -image image-path
+
+e.g. ./class -image images/cat.jpg
+
+
 The container exposes a scoring URI at http://localhost:5001/score.
