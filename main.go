@@ -103,7 +103,7 @@ func main() {
 		log.Fatal("Error getting categories", err)
 	}
 
-	fmt.Println("Higest prob is", maxProb, "at", maxIndex, "(inference time:", modelResult.Time, ")")
+	fmt.Println("Highest prob is", maxProb, "at", maxIndex, "(inference time:", modelResult.Time, ")")
 	fmt.Println("Probably ", categories[maxIndex])
 }
 
