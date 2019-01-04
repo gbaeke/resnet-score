@@ -14,3 +14,5 @@ e.g. ./class -image images/cat.jpg
 
 
 The container exposes a scoring URI at http://localhost:5001/score.
+
+Download tool for Linux from releases: [Download](https://github.com/gbaeke/resnet-score/releases/download/v0.1/class)
