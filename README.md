@@ -10,7 +10,7 @@ Use tool as follows:
 
 ./class -image image-path -uri score-uri
 
-e.g. ./class -image images/cat.jpg
+e.g. ./class -image images/cat.jpg -uri http://38.22.33.22/score
 
 
 The container exposes a scoring URI at http://localhost:5001/score. That URI is the default URI. Override the URI with the -uri flag.
