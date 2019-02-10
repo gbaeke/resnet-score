@@ -27,6 +27,7 @@ type OutputData struct {
 
 func main() {
 	imagePath := flag.String("image", "", "path to image")
+	scoreURI := flag.String("uri", "http://localhost:5100/score", "scoring URI")
 	flag.Parse()
 
 	if *imagePath == "" {
@@ -67,8 +68,10 @@ func main() {
 
 	// Create the HTTP request - no need for auth with local ResNet50 container
 	client := &http.Client{}
-	request, err := http.NewRequest("POST", "http://localhost:5001/score", body)
+	request, err := http.NewRequest("POST", *scoreURI, body)
 	request.Header.Add("Content-Type", "application/json")
+
+	fmt.Printf("Scoring %s against %s.\n", *imagePath, *scoreURI)
 
 	// Send the request to the local web service
 	resp, err := client.Do(request)
