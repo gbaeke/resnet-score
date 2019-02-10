@@ -8,11 +8,13 @@ docker run -d -p 5001:5001 gbaeke/onnxresnet50v2
 
 Use tool as follows:
 
-./class -image image-path
+./class -image image-path -uri score-uri
 
 e.g. ./class -image images/cat.jpg
 
 
-The container exposes a scoring URI at http://localhost:5001/score.
+The container exposes a scoring URI at http://localhost:5001/score. That URI is the default URI. Override the URI with the -uri flag.
 
-Download tool for Linux from releases: [Download](https://github.com/gbaeke/resnet-score/releases/download/v0.1/class)
+Download tool for Linux from releases: [Download](https://github.com/gbaeke/resnet-score/releases/download/v0.2/class)
+
+Download tool for Windows from releases: [Download](https://github.com/gbaeke/resnet-score/releases/download/v0.2/class.exe)
